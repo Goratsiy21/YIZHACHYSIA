@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо</title>
+    <!-- Підключення шрифту Jura з Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jura', sans-serif; /* Використання шрифту Jura */
+            margin: 0;
+            padding: 0;
+            background-image: url('img/3.jpg');
+            background-size: cover;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .label {
+            font-weight: bold; /* Жирний текст для лейблів */
+        }
+
+        /* Сторінка */
+        .main-content {
+            padding: 20px;
+            margin-left: 250px;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+        }
+
+        /* Ліва панель */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #008000;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 33.33%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            text-align: left;
+        }
+
+        .sidebar a:hover {
+            background-color: #006600;
+        }
+
+        /* Головна сторінка */
+        .profile {
+            text-align: center;
+        }
+
+        .profile img {
+            width: 20%;
+            height: auto;
+        }
+
+        .profile h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .profile p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        /* Секції з каруселлю */
+        .carousel-container {
+            display: none;
+            text-align: center;
+        }
+
+        .carousel-container img {
+            width: 300px;
+            height: auto;
+            margin: 20px auto; /* Відступ між зображеннями і автоматичне центровання */
+            background-color: transparent; 
+            border: none; 
+            box-shadow: none; 
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ліва панель -->
+    <div class="sidebar">
+        <img src="img/2.png" alt="Емблема">
+
+    </div>
+
+    <!-- Головна сторінка -->
+    <div class="main-content" id="main">
+        <div class="profile">
+            <img src="img/1.jpg" alt="Фото">
+            <img src="img/1.GIF" alt="Фото">
+            <img src="img/Слайд1.GIF" alt="Фото">
+            <img src="Tranzistor/Слайд3.gif" alt="Фото">
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.main-content');
+            sections.forEach(section => section.style.display = 'none');
+            
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Показати головну сторінку при завантаженні
+        showSection('main');
+    </script>
+
+</body>
+</html>
